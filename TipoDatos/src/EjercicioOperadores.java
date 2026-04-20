@@ -111,7 +111,7 @@ public class EjercicioOperadores {
          * la consola.
          */
         System.out.println("\nEjercicio No. 7: ");
-        
+    
     }
 
 }
