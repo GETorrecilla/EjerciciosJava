@@ -1,5 +1,8 @@
+import java.util.Scanner;
+
 public class EjercicioOperadores {
     public static void main(String arg[]) throws Exception {
+        Scanner sc = new Scanner(System.in);
         // Ejercicio 1.
         System.out.println("Ejercicio No. 1: ");
         double operacion = 6 / 2 * (1 + 2);
@@ -111,6 +114,61 @@ public class EjercicioOperadores {
          * la consola.
          */
         System.out.println("\nEjercicio No. 7: ");
+        System.out.println("\n***Programa que opera dos numeros***");
+
+        System.out.print("Por favor ingrese el primer número: ");
+        double num1 = sc.nextDouble();
+        System.out.print("Por favor ingrese el segundo número: ");
+        double num2 = sc.nextDouble();
+        System.out.println("------------Resultados-----------------");
+        System.out.println("La suma de estos numeros es: "+(num1+num2));
+        System.out.println("La resta de estos numeros es: "+(num1-num2));
+        System.out.println("La multiplicación de estos numeros es: "+(num1*num2));
+        System.out.printf("La división de estos numeros es: %.2f",(num1/num2));
+
+        //Ejercicio 8.
+        /*Crea un programa que calcule el área y el perímetro de un rectángulo. Solicita al usuario 
+        la longitud y el ancho del rectángulo.
+         */
+        System.out.println("\n\nEjercicio No. 8: ");
+        System.out.println("\n *** Programa para calcular área y perímetro de rectángulo***");
+        System.out.print("Por favor ingrese la longitud del rectángulo (cm): ");
+        double longitud = sc.nextDouble();
+        System.out.print("Por favor ingrese el ancho del rectángulo (cm): ");
+        double ancho = sc.nextDouble();
+        System.out.println("El área del rectángulo es: "+(longitud*ancho)+"cm2.");
+        System.out.println("El perímetro del rectángulo es: "+(2*(longitud+ancho))+"cm."); 
+
+        //Ejercicio 9.
+        /*Escribe un programa que convierta una temperatura dada en grados Celsius a grados Fahrenheit
+         y Kelvin. Usa las siguientes fórmulas:
+            Fahrenheit = Celsius * 9/5 + 32
+            Kelvin = Celsius + 273.15
+         */
+        System.out.println("\n\nEjercicio No. 8: ");
+        System.out.println("***Conversor de temperatura***");
+        System.out.print("Por favor ingrese la temperatura en grados Celsius: ");
+        double celsius = sc.nextDouble();
+        double fahrenheit = (celsius*(9.0/5))+32;
+        double kelvin = celsius + 273.15;
+        System.out.printf("%n La temperatuta %.2f °C equivale a %.2f °F y a %.2f °K",celsius, fahrenheit,kelvin);
+
+        //Ejercicio 10.
+        /*Crea un programa que calcule la media aritmética de tres números introducidos por el usuario.
+         */
+        System.out.println("\n\nEjercicio No. 9: ");
+        System.out.println("***Programa que calcula la media aritmética***");
+        System.out.print("Por favor ingrese el 1er número: ");
+        double numero1 = sc.nextDouble();
+        System.out.print("Por favor ingrese el 2do número: ");
+        double numero2 = sc.nextDouble();
+        System.out.print("Por favor ingrese el 3er número: ");
+        double numero3 = sc.nextDouble();
+        double media = (numero1+numero2+numero3)/3;
+        System.out.println("------------------------------------");
+        System.out.println("La media de estos números es: "+media);
+
+
     
     }
 
