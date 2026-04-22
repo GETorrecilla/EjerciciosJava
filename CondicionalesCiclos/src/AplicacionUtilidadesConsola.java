@@ -5,6 +5,7 @@ public class AplicacionUtilidadesConsola {
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
         int opcion, subopcion = 0;
+        final var VALOR_PI =  Math.PI;
         System.out.println("******Bienvenido al Programa de Utilidades********");
 
         do{
@@ -19,11 +20,32 @@ public class AplicacionUtilidadesConsola {
             case 1:
                 do {
                     System.out.println("Subopciones:\n 1 - Circulo. \n 2 - Rectángulo. \n Ingrese número según la figura:");
-                    opcion = sc.nextInt();
+                    subopcion = sc.nextInt();
                     if(subopcion == 1){
+                        double areaCirculo;
+                        System.out.println("Por favor ingrese el radio del circulo: ");
+                        double radioCirculo = sc.nextDouble();
+                        areaCirculo = VALOR_PI*radioCirculo*radioCirculo;
+                        System.out.println("----------------------------------------------------------------------");
+                        System.out.println("***************************-RESULTADO-********************************");
+                        System.out.println("----------------------------------------------------------------------");
+                        System.out.printf("El área del circulo de radio %.2f es: %.2f %n",radioCirculo, areaCirculo);
+                        System.out.println("----------------------------------------------------------------------");
+                        break;
 
                     } else if (subopcion == 2){
-
+                        double areaRectangulo;
+                        System.out.println("Por favor ingrese la longitud del rectángulo: ");
+                        double longitud = sc.nextDouble();
+                        System.out.println("Por favor ingrese el ancho del rectángulo: ");
+                        double ancho = sc.nextDouble();
+                        areaRectangulo = longitud * ancho;
+                        System.out.println("----------------------------------------------------------------------");
+                        System.out.println("***************************-RESULTADO-********************************");
+                        System.out.println("----------------------------------------------------------------------");
+                        System.out.printf("El área del rectángulo de ancho %.2f y longitud %.2f es: %.2f %n",ancho, longitud, areaRectangulo);
+                        System.out.println("----------------------------------------------------------------------");
+                        break;
                     } else {
                         System.out.println("------------ !! - Ingrese un número válido. ------------");
                     }
